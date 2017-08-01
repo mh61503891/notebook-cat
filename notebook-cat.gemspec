@@ -9,10 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Masayuki Higashino']
   spec.email         = ['msyk@hgsn.info']
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-
+  spec.summary       = 'A pretty notebook for cats.'
+  spec.description   = 'A pretty notebook for cats.'
+  spec.homepage      = 'https://github.com/mh61503891/notebook-cat'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
