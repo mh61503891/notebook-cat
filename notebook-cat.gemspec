@@ -1,13 +1,13 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "notebook/cat/version"
+require 'notebook-cat/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "notebook-cat"
-  spec.version       = Notebook::Cat::VERSION
-  spec.authors       = ["Masayuki Higashino"]
-  spec.email         = ["msyk@hgsn.info"]
+  spec.name          = 'notebook-cat'
+  spec.version       = NotebookCat::VERSION
+  spec.authors       = ['Masayuki Higashino']
+  spec.email         = ['msyk@hgsn.info']
 
   spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
