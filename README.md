@@ -1,28 +1,20 @@
-# Notebook::Cat
+# Notebook Cat
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/notebook/cat`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Nya-n!
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'notebook-cat'
+```bash
+$ brew install mecab
+$ brew install mecab-ipadic
+$ brew install cabocha
+$ brew install sqlite3
+$ gem install notebook-cat
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install notebook-cat
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Nya-n!
 
 ## Development
 
@@ -32,7 +24,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/notebook-cat.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mh61503891/notebook-cat.
 
 ## License
 
