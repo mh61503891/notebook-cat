@@ -38,6 +38,12 @@ module NotebookCat
       @urls ||= URI.extract(@markdown, %w(http https ftp file mailto javascript))
     end
 
+    def block_codes
+      @block_codes ||= contents.select { |content|
+        content[:type] == :block_code
+      }
+    end
+
     class Renderer < Redcarpet::Render::HTML
 
       def contents

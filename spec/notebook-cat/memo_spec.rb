@@ -10,4 +10,8 @@ RSpec.describe NotebookCat::Memo do
     expect(memo.urls.size).to eq 2
   end
 
+  it '#block_codes' do
+    expect(memo.block_codes.size).to eq 2
+  end
+
 end
