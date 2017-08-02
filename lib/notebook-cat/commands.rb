@@ -16,6 +16,7 @@ module NotebookCat
       # binding.pry
       require 'awesome_print'
       ap @memo.contents
+      ap @memo.urls
     end
 
     def update

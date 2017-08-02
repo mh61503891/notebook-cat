@@ -1,5 +1,6 @@
 require 'redcarpet'
 require 'yaml'
+require 'uri'
 
 module NotebookCat
 
@@ -31,6 +32,10 @@ module NotebookCat
         @contents = renderer.contents
       end
       @contents
+    end
+
+    def urls
+      @urls ||= URI.extract(@markdown, %w(http https ftp file mailto javascript))
     end
 
     class Renderer < Redcarpet::Render::HTML
