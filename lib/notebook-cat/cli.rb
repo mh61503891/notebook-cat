@@ -12,8 +12,8 @@ module NotebookCat
     end
 
     desc :show, 'Show a notebook'
-    def show
-      Commands.new.show()
+    def show(id)
+      Commands.new.show(id)
     end
 
     desc :search, 'Search notebooks'

@@ -1,3 +1,6 @@
+require 'pathname'
+require 'fileutils'
+require 'notebook-cat/memo'
 
 module NotebookCat
   class Commands
@@ -5,7 +8,14 @@ module NotebookCat
     def create
     end
 
-    def show
+    def show(id)
+      path = Pathname.new('posts').join(id).sub_ext('.md')
+      @memo = Memo.read(path)
+      # TODO development
+      # require 'pry'
+      # binding.pry
+      require 'awesome_print'
+      ap @memo.contents
     end
 
     def update
@@ -22,15 +32,6 @@ end
 
 
 
-#
-#
-# require 'pathname'
-# require 'fileutils'
-#
-#
-#
-# class CLI < Thor
-#
 #   desc :new, 'create a new post'
 #   def new
 #     path = Pathname.new('posts')
@@ -41,9 +42,6 @@ end
 #     puts file
 #     FileUtils.touch(file)
 #
-#     require 'redcarpet'
-#     renderer = Redcarpet::Render::HTML.new
-#     @markdown = Redcarpet::Markdown.new(renderer)
 #   end
 #
 #   desc :update, 'update the database'
