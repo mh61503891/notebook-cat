@@ -49,7 +49,12 @@ module NotebookCat
       end
 
       def block_quote(quote)
-        # TODO remove duplicated block_quote.quote and paragraph.text
+        # Delete the last element of contents if which equals the quote of block_quote
+        if contents[-1][:type] == :paragraph
+          if contents[-1][:text] == quote
+            contents.delete_at(-1)
+          end
+        end
         contents << {
           type: :block_quote,
           quote: quote
@@ -70,7 +75,12 @@ module NotebookCat
       end
 
       def footnote_def(content, number)
-        # TODO remove duplicated footnote_def.content and paragraph.text
+        # Delete the last element of contents if which equals the content of footnote_def
+        if contents[-1][:type] == :paragraph
+          if contents[-1][:text] == content
+            contents.delete_at(-1)
+          end
+        end
         contents << {
           type: :footnote_def,
           content: content,
